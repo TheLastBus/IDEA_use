@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_191" class="java.beans.XMLDecoder">
+ <object class="ClothesSupermarketSystem.bean.Clothes">
+  <void property="brand">
+   <string>拉夏贝尔</string>
+  </void>
+  <void property="color">
+   <string>蓝白色</string>
+  </void>
+  <void property="description">
+   <string>青春有活力</string>
+  </void>
+  <void property="id">
+   <string>A001</string>
+  </void>
+  <void property="num">
+   <int>100</int>
+  </void>
+  <void property="price">
+   <float>280.5</float>
+  </void>
+  <void property="size">
+   <string>xl</string>
+  </void>
+  <void property="style">
+   <string>春季新款</string>
+  </void>
+ </object>
+</java>
