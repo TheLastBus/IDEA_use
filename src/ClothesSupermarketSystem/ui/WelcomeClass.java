@@ -51,8 +51,7 @@ public class WelcomeClass extends BaseClass {
                     break;
             }
         }
-
-
+        new HomeClass().show();
 
     }
 

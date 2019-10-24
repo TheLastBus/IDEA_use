@@ -1,29 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<java version="1.8.0_191" class="java.beans.XMLDecoder">
- <object class="ClothesSupermarketSystem.bean.Clothes">
-  <void property="brand">
-   <string>拉夏贝尔</string>
-  </void>
-  <void property="color">
-   <string>蓝白色</string>
-  </void>
-  <void property="description">
-   <string>青春有活力</string>
-  </void>
-  <void property="id">
-   <string>A001</string>
-  </void>
-  <void property="num">
-   <int>100</int>
-  </void>
-  <void property="price">
-   <float>280.5</float>
-  </void>
-  <void property="size">
-   <string>xl</string>
-  </void>
-  <void property="style">
-   <string>春季新款</string>
-  </void>
- </object>
-</java>
+<list>
+  <ClothesSupermarketSystem.bean.Clothes>
+    <id>A001</id>
+    <brand>拉夏贝尔</brand>
+    <style>春季新款</style>
+    <color>蓝白色</color>
+    <size>xl</size>
+    <num>100</num>
+    <price>280.5</price>
+    <description>青春有活力</description>
+  </ClothesSupermarketSystem.bean.Clothes>
+  <ClothesSupermarketSystem.bean.Clothes>
+    <id>A002</id>
+    <brand>森马</brand>
+    <style>秋季新款</style>
+    <color>黑色</color>
+    <size>m</size>
+    <num>150</num>
+    <price>300.0</price>
+    <description>稳重</description>
+  </ClothesSupermarketSystem.bean.Clothes>
+  <ClothesSupermarketSystem.bean.Clothes>
+    <id>A003</id>
+    <brand>海澜之家</brand>
+    <style>夏季新款</style>
+    <color>白色</color>
+    <size>mm</size>
+    <num>110</num>
+    <price>380.5</price>
+    <description>少女气息</description>
+  </ClothesSupermarketSystem.bean.Clothes>
+</list>
