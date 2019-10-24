@@ -1,32 +1,29 @@
-<list>
-  <ClothesSupermarketSystem.bean.Clothes>
-    <id>A001</id>
-    <brand>Ф▀┴Е╓▐Х╢²Е╟■</brand>
-    <style>Ф≤╔Е╜ёФ√╟Ф╛╬</style>
-    <color>Х⌠²Г≥╫Х┴╡</color>
+<?xml version = "1.0" enconding="utf-8" ?><list>
+  <clothes id="A001">
+    <brand>ю╜од╠╢╤Ш</brand>
+    <style>╢╨╪╬пб©Н</style>
+    <color>ю╤╟ви╚</color>
     <size>xl</size>
     <num>100</num>
     <price>280.5</price>
-    <description>И²▓Ф≤╔Ф°┴Ф╢╩Е┼⌡</description>
-  </ClothesSupermarketSystem.bean.Clothes>
-  <ClothesSupermarketSystem.bean.Clothes>
-    <id>A002</id>
-    <brand>Фё╝И╘╛</brand>
-    <style>Г╖▀Е╜ёФ√╟Ф╛╬</style>
-    <color>И╩▒Х┴╡</color>
+    <description>гЮ╢╨сп╩На╕</description>
+  </clothes>
+  <clothes id="A002">
+    <brand>и╜бМ</brand>
+    <style>гО╪╬пб©Н</style>
+    <color>╨зи╚</color>
     <size>m</size>
-    <num>150</num>
+    <num>-11</num>
     <price>300.0</price>
-    <description>Г╗ЁИ┤█</description>
-  </ClothesSupermarketSystem.bean.Clothes>
-  <ClothesSupermarketSystem.bean.Clothes>
-    <id>A003</id>
-    <brand>Ф╣╥Ф╬°Д╧▀Е╝╤</brand>
-    <style>Е╓▐Е╜ёФ√╟Ф╛╬</style>
-    <color>Г≥╫Х┴╡</color>
+    <description>нхжь</description>
+  </clothes>
+  <clothes id="A003">
+    <brand>╨ёю╫ж╝╪р</brand>
+    <style>од╪╬пб©Н</style>
+    <color>╟ви╚</color>
     <size>mm</size>
     <num>110</num>
     <price>380.5</price>
-    <description>Е╟▒Е╔ЁФ╟■Ф│╞</description>
-  </ClothesSupermarketSystem.bean.Clothes>
+    <description>иые╝фЬо╒</description>
+  </clothes>
 </list>

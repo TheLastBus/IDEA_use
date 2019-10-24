@@ -48,7 +48,7 @@ public class Toxml {
             cloth2.setBrand("森马");
             cloth2.setColor("黑色");
             cloth2.setDescription("稳重");
-            cloth2.setSize("m");
+            cloth2.setSize("M");
             cloth2.setNum(150);
             cloth2.setPrice(300f);
             cloth2.setStyle("秋季新款");
@@ -59,7 +59,7 @@ public class Toxml {
             cloth3.setBrand("海澜之家");
             cloth3.setColor("白色");
             cloth3.setDescription("少女气息");
-            cloth3.setSize("mm");
+            cloth3.setSize("x");
             cloth3.setNum(110);
             cloth3.setPrice(380.5f);
             cloth3.setStyle("夏季新款");
@@ -69,7 +69,7 @@ public class Toxml {
             xStream.alias("clothes",Clothes.class);  //起别名   把一长串包名加文件名 变成了clothes
             xStream.useAttributeFor(Clothes.class,"id");  //  把属性id放到 类名clothes里面一起显示
 
-            bos.write("<?xml version = \"1.0\" enconding=\"utf-8\" ?>".getBytes());
+            bos.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>".getBytes());
             xStream.toXML(clothes,bos);
             bos.close();
 

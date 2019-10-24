@@ -46,7 +46,7 @@ public class HomeClass extends BaseClass {
                         buyProduct();
                         flag=false;
                     } catch (BusinessException e) {
-                        println(e.getMessage());  //发生在下层的能够显示出来 (错误发生在更下层)
+                        println(e.getMessage());  //抛出必须捕获这里  ClothesServiceImpl.findById  input.error  然后flag没变就继续循环
                     }
                     break;
                 case "0":  //退出
@@ -65,7 +65,7 @@ public class HomeClass extends BaseClass {
      * 购买商品
      * @throws BusinessException
      */
-    private void buyProduct()throws BusinessException {
+    private void buyProduct()throws BusinessException {   //clothesServiceimpl抛出的 自己没解决(位置不合适 ) 也抛出
         //生成订单  需要id 和数量
         boolean flag = true;
         int count = 1;  //订单数
@@ -73,19 +73,27 @@ public class HomeClass extends BaseClass {
         Order order = new Order();
         while (flag) {
             println(getString("product.input.id"));
-            String id = input.nextLine();
+            String id = input.nextLine();            // 输入复杂没法捕获 条件判断麻烦 ---只能解决空指针了!!!--
             println(getString("product.input.shoppingNum"));
             String shoppingNum = input.nextLine();
 
             OrderItem orderItem = new OrderItem();
-            Clothes clothes = clothesService.findById(id);
-
+            Clothes clothes=null;
+  //          try {
+            clothes = clothesService.findById(id);
+   //         } catch (BusinessException e) {        //id不对返回对象空指针了!!
+    //            println(getString(e.getMessage()));   // 如果上一个主要是bus异常必须捕获 才能正常 空指针本来解决了
+    //        }                                         //clothesServiceImpl 抛出异常这里正确捕获后  try里面赋值就不执行了 人为对象制空了!!!
+                                                        // 因为下面马上用到对象 所以错误爆出来还是空指针了  和registclass情况不一样
+                                                        //没解决抛出了 给case "3"
+            //如果id错误就没有clothes 就空指针了  所以要么更前面返回值判断非空  要么输入时候规定输入
             int num = Integer.parseInt(shoppingNum);
             if (num > clothes.getNum()) {
                 println(getString("product.num.error"));  //new buss异常不能在这 必须有捕获地方才可以!
+            }else{
+                //一条订单明细
+                clothes.setNum(clothes.getNum() - num);       //减去库存
             }
-            //一条订单明细
-            clothes.setNum(clothes.getNum() - num);       //减去库存
             orderItem.setClothes(clothes);
             orderItem.setShoppingNum(num);
             orderItem.setSum(clothes.getPrice()*num);  //一个订单的金额
@@ -116,7 +124,7 @@ public class HomeClass extends BaseClass {
         orderService.buyProduct(order);  //调用IO方法
 
         clothesService.update();               //更新库存
-        showProduct();
+        show();
     }
     private void findList(){
 

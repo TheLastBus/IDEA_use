@@ -54,7 +54,7 @@ public class ProductsXmlUtils {
         try {
             BufferedOutputStream bos = new BufferedOutputStream(
                     new FileOutputStream("clothes.xml"));
-            bos.write("<?xml version = \"1.0\" enconding=\"utf-8\" ?>".getBytes());
+            bos.write("<?xml version=\"1.0\" encoding=\"UTF-8\"?>".getBytes());
             xStream.toXML(products,bos);
             bos.close();
         } catch (FileNotFoundException e) {

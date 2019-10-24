@@ -28,10 +28,9 @@ public class UserIO {
             out.writeObject(users);  //每次新加一个 就要把数组用户重新存一边
             out.close();
             return true;
-        } catch (IOException e) {
-            new BusinessException("io.write.error");  //被异常捕获时候 显示自己的(以前这个放到条件判断的)
+        } catch (IOException e) { //异常打印是 调用一个自己的
+            throw new BusinessException("io.write.error");  //被异常捕获时候 显示自己的(以前这个放到条件判断的)
         }
-        return false;  //读为什么只能写一个呢
     }
 
     //读取用户

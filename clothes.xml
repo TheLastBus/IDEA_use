@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <list>
-  <ClothesSupermarketSystem.bean.Clothes>
-    <id>A001</id>
+  <clothes id="A001">
     <brand>拉夏贝尔</brand>
     <style>春季新款</style>
     <color>蓝白色</color>
@@ -8,25 +8,23 @@
     <num>100</num>
     <price>280.5</price>
     <description>青春有活力</description>
-  </ClothesSupermarketSystem.bean.Clothes>
-  <ClothesSupermarketSystem.bean.Clothes>
-    <id>A002</id>
+  </clothes>
+  <clothes id="A002">
     <brand>森马</brand>
     <style>秋季新款</style>
     <color>黑色</color>
-    <size>m</size>
-    <num>150</num>
+    <size>M</size>
+    <num>135</num>
     <price>300.0</price>
     <description>稳重</description>
-  </ClothesSupermarketSystem.bean.Clothes>
-  <ClothesSupermarketSystem.bean.Clothes>
-    <id>A003</id>
+  </clothes>
+  <clothes id="A003">
     <brand>海澜之家</brand>
     <style>夏季新款</style>
     <color>白色</color>
-    <size>mm</size>
+    <size>x</size>
     <num>110</num>
     <price>380.5</price>
     <description>少女气息</description>
-  </ClothesSupermarketSystem.bean.Clothes>
+  </clothes>
 </list>

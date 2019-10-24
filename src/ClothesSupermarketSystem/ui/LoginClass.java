@@ -20,10 +20,10 @@ public class LoginClass extends BaseClass{
         UserService userService = new UserServiceImpl();
         User user = userService.login(username, password);//登陆成功返回user对象  后面用
 
-        if(user!=null){  //返回查找有此用户 表示成功
+        if(user!=null){  //返回查找有此用户 表示成功  这也是非空判断排除空指针
             currUser=user;   //当前操作用户
         }else{
-            throw new BusinessException("login.error");
+            throw new BusinessException("login.error"); // 想让调用地方 getmessage显示一下
         }
 
     }

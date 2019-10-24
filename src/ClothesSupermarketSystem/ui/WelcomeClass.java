@@ -24,7 +24,7 @@ public class WelcomeClass extends BaseClass {
             println(getString("info.select"));
             String s = input.nextLine();  //输入序号
             switch(s){
-                case "1":  //只有选了 1 或 2 才能退出来 否则就循环
+                case "1":  //只有选了 1 或 2 才能退出来 否则就循环         这里正常不捕获就会中断 打印错误信息 try后打印自己的且程序不会停
                     try {
                         new LoginClass().login();
                         println(getString("login.success"));
@@ -38,7 +38,7 @@ public class WelcomeClass extends BaseClass {
          //           System.out.println("注册");
                     try {
                         new RegisterClass().register();
-                        println(getString("reg.success"));
+                        println(getString("reg.success"));  //运行时为了显示自己的异常 throw 出来了就要捕获
                         flag = false;
                     } catch (BusinessException e) {
                         println(getString("reg.error"));

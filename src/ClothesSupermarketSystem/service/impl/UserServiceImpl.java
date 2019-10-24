@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
             throw new BusinessException("username.notnull");
         }
         if(EmptyUtils.isEmpty(password)){
-            throw new BusinessException("password.notnull");
+            throw new BusinessException("password.notnull");   //抛异常
         }
         UserIO userIO = new UserIO();
         User user = userIO.findUser(username, password);
