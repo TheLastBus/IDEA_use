@@ -7,35 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="467cda7e-4c56-464c-aa6b-eededa3b8fe3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Project_achievement_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/impl/OrderServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/ClothesIo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/DateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/OrderIo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Project_achievement_jar/Project_achievement.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Project_achievement_jar/Project_achievement.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/res/r.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/res/r.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/res/r_temp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/res/r_temp.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/service/ClothesService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/service/ClothesService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/service/impl/ClothesServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/service/impl/ClothesServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/test/ProductXmlUtilTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/test/ProductXmlUtilTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/ui/HomeClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/ui/HomeClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/util/ProductsXmlUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/util/ProductsXmlUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/util/Toxml.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project_achievement/ClothesSupermarketSystem/util/Toxml.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/bean/OrderItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/bean/OrderItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/res/r.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/res/r.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/res/r_temp.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/res/r_temp.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/ClothesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/ClothesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/impl/ClothesServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/impl/ClothesServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/test/ProductXmlUtilTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/test/ProductXmlUtilTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/impl/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/service/impl/OrderServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/ui/HomeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/ui/HomeClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/ui/LoginClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/ui/LoginClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/ui/WelcomeClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/ui/WelcomeClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/ProductsXmlUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/ProductsXmlUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/Toxml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/Toxml.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/UserIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClothesSupermarketSystem/util/UserIO.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +66,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Batch.run">
+  <component name="RunManager" selected="JUnit.All in Project_achievement">
     <configuration name="MainClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ClothesSupermarketSystem.MainClass" />
       <module name="Project_achievement" />
@@ -127,6 +104,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in Project_achievement" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project_achievement" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProductXmlUtilTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project_achievement" />
       <extension name="coverage">
@@ -145,6 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Project_achievement" />
         <item itemvalue="Batch.run" />
         <item itemvalue="Application.MainClass" />
         <item itemvalue="JUnit.ProductXmlUtilTest.test" />
@@ -198,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571907971599</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update product buy">
+      <created>1571925246890</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571925246890</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -220,6 +213,7 @@
     <MESSAGE value="add Toxml util" />
     <MESSAGE value="add homeClass list show" />
     <MESSAGE value="add exit" />
-    <option name="LAST_COMMIT_MESSAGE" value="add exit" />
+    <MESSAGE value="update product buy" />
+    <option name="LAST_COMMIT_MESSAGE" value="update product buy" />
   </component>
 </project>

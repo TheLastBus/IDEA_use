@@ -82,7 +82,7 @@ public class HomeClass extends BaseClass {
 
             int num = Integer.parseInt(shoppingNum);
             if (num > clothes.getNum()) {
-                new BusinessException("product.num.error");
+                println(getString("product.num.error"));  //new buss异常不能在这 必须有捕获地方才可以!
             }
             //一条订单明细
             clothes.setNum(clothes.getNum() - num);       //减去库存
