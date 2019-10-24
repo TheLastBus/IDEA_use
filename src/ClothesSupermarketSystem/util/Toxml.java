@@ -66,7 +66,6 @@ public class Toxml {
             clothes.add(cloth3);
 
             XStream xStream = new XStream(new Xpp3Driver());
-
             xStream.alias("clothes",Clothes.class);  //起别名   把一长串包名加文件名 变成了clothes
             xStream.useAttributeFor(Clothes.class,"id");  //  把属性id放到 类名clothes里面一起显示
 

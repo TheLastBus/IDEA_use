@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author zy
+ * @author zy                   工具类
  * @date 2019-10-23 0:08
  * @reason :  用户放集合     对象流传输集合
  *
@@ -39,8 +39,8 @@ public class UserIO {
         try {
             ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(
                     new FileInputStream(USER_FILE)));
-            users = (List<User>) in.readObject();
-            in.close();
+            users = (List<User>) in.readObject();     //list定义在外面  读写都是它  只是有新增删除用户后 List也会不一样!
+            in.close();                                         //所以这里没有返回值  只是看是否成功
             return true;
         } catch (IOException |ClassNotFoundException e) {
             throw new BusinessException("io.read.error");  //不用读取调用直接抛出了??????
@@ -54,7 +54,7 @@ public class UserIO {
         users.add(user);
     }
 
-    //查询用户--是给登陆用的...集合定义在这 所以查询也在这..    //可以在这再无此用户
+    //-登陆
     public User findUser(String username,String password){
         for (User user : users) {
             if((user.getUsername().equals(username)) &&(user.getPassword().equals(password))){

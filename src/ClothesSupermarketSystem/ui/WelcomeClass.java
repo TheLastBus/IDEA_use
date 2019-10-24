@@ -17,7 +17,7 @@ public class WelcomeClass extends BaseClass {
     public void start(){
         println(getString("info.welcome"));
         UserIO userIO = new UserIO();
-        userIO.readUsers();
+        userIO.readUsers();  //登陆前就有了
         boolean flag = true;
         while(flag){
             println(getString("info.login.reg"));
@@ -51,7 +51,7 @@ public class WelcomeClass extends BaseClass {
                     break;
             }
         }
-        new HomeClass().show();
+        new HomeClass().show();  //登陆成功后  显示购买菜单
 
     }
 

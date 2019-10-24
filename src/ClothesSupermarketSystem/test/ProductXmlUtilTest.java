@@ -15,7 +15,7 @@ import java.util.List;
 public class ProductXmlUtilTest {
     @Test
     public void test(){
-        List<Clothes> clothes = ProductsXmlUtils.paarseProductFromXml();
+        List<Clothes> clothes = ProductsXmlUtils.parseProductFromXml();
 
   //      System.out.println(Arrays.toString(clothes.toArray()));
 

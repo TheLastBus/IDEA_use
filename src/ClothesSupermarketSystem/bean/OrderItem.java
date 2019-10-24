@@ -3,7 +3,7 @@ package ClothesSupermarketSystem.bean;
 /**
  * @author zy
  * @date 2019-10-22 21:48
- * @reason : 订单明细  其中某个人的
+ * @reason : 订单明细  其中某一个人的
  */
 public class OrderItem {
     private int itemId;       //货物id
