@@ -1,11 +1,14 @@
 package ClothesSupermarketSystem.bean;
 
+import java.io.Serializable;
+
 /**
  * @author zy
  * @date 2019-10-22 21:48
  * @reason : 订单明细  其中某一个人的
  */
-public class OrderItem {
+public class OrderItem implements Serializable {
+    private static final long serialVersionUID = 4458683683654079450L;
     private int itemId;       //货物id
     private Clothes clothes;  //商品
     private int shoppingNum;  //购买数量

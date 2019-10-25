@@ -19,6 +19,9 @@ public class UserIO {
     private static List<User> users = new ArrayList<>();    //静态 每次也只读一次
     private static final String USER_FILE = "user.obj";   //存储数据的文件名
 
+
+
+
     //写入用户列表
     public boolean wirteUsers() throws BusinessException {    //和下面解决的没联系  抛出异常的语句不同
 
@@ -33,23 +36,27 @@ public class UserIO {
         }
     }
 
-    //读取用户
+    //读取用户(程序先要读出来 所以先要有文件)
     public boolean readUsers() throws BusinessException{
         try {
-            ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(
-                    new FileInputStream(USER_FILE)));
-            users = (List<User>) in.readObject();     //list定义在外面  读写都是它  只是有新增删除用户后 List也会不一样!
-            in.close();                                         //所以这里没有返回值  只是看是否成功
-            return true;
+                ObjectInputStream in = new ObjectInputStream(new BufferedInputStream(
+                        new FileInputStream(USER_FILE)));
+
+                users = (List<User>) in.readObject();     //list定义在外面  读写都是它  只是有新增删除用户后 List也会不一样!
+                in.close();                                         //所以这里没有返回值  只是看是否成功
+                return true;
+
         } catch (IOException |ClassNotFoundException e) {
             throw new BusinessException("io.read.error");  //不用读取调用直接抛出了??????
         }
 
     }
 
-    //添加用户
+
+    //添加用户 先读文件得到users
     public void add(User user) {
-        user.setId(users.size() + 1);  //id自增的那就是用户数量
+
+        user.setId(users.size() + 1);  //id自增的那就是用户数量  //usersize 与流无关呢 只是集合操作还没写
         users.add(user);
     }
 

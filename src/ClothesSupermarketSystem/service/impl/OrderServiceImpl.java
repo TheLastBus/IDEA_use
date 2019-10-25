@@ -15,9 +15,15 @@ import java.util.List;
 public class OrderServiceImpl implements OrderService {
 
     private OrderIo orderIo = new OrderIo();
+    boolean flag = false;
     @Override
     public void buyProduct(Order o) throws BusinessException {
-        orderIo.add(o);
+        if (o != null) {
+            orderIo.add(o);
+        } else {
+            throw new BusinessException("orderIo.add.error");
+        }
+
     }
 
     @Override

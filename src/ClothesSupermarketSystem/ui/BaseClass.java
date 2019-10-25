@@ -1,6 +1,7 @@
 package ClothesSupermarketSystem.ui;
 
 import ClothesSupermarketSystem.bean.User;
+import ClothesSupermarketSystem.freamwork.BeanFactory;
 
 import java.util.ResourceBundle;
 import java.util.Scanner;
@@ -11,11 +12,15 @@ import java.util.Scanner;
  * @reason :  抽象父类  基础类
  *
  * ResourceBundle  因为只读就用他了
+ *所以只有继承baseclass的相关才可以 异常直接用字符串  ---protected修饰
  *
+ * 工厂定义在这
  */
 public abstract class BaseClass {
     protected static Scanner input = new Scanner(System.in);
     protected static User currUser; //当前登陆的用户
+    protected BeanFactory beanFactory = null;
+
     private static ResourceBundle r = ResourceBundle
             .getBundle("ClothesSupermarketSystem/res/r"); // ClothesSupermarketSystem.res.r   //这个类不能写全名
 
@@ -31,6 +36,11 @@ public abstract class BaseClass {
     //封装输出方法''''''
     public static void print(String s){
         System.out.println(s);
+    }
+
+    public BaseClass(){
+
+        beanFactory = BeanFactory.init();
     }
 
 }

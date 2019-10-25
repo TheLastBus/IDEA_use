@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<list>
+<?xml version="1.0" encoding="UTF-8"?><list>
   <clothes id="A001">
     <brand>拉夏贝尔</brand>
     <style>春季新款</style>
     <color>蓝白色</color>
     <size>xl</size>
-    <num>100</num>
+    <num>64</num>
     <price>280.5</price>
     <description>青春有活力</description>
   </clothes>
@@ -14,7 +13,7 @@
     <style>秋季新款</style>
     <color>黑色</color>
     <size>M</size>
-    <num>135</num>
+    <num>98</num>
     <price>300.0</price>
     <description>稳重</description>
   </clothes>
@@ -23,7 +22,7 @@
     <style>夏季新款</style>
     <color>白色</color>
     <size>x</size>
-    <num>110</num>
+    <num>92</num>
     <price>380.5</price>
     <description>少女气息</description>
   </clothes>

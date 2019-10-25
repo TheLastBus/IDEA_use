@@ -5,6 +5,8 @@ import ClothesSupermarketSystem.service.UserService;
 import ClothesSupermarketSystem.service.impl.UserServiceImpl;
 import ClothesSupermarketSystem.util.BusinessException;
 
+import javax.lang.model.element.VariableElement;
+
 /**
  * @author zy
  * @date 2019-10-22 23:49
@@ -15,6 +17,11 @@ import ClothesSupermarketSystem.util.BusinessException;
  * 注册功能类(模块)  收集用户信息 完成用户创建 存进系统文件
  */
 public class RegisterClass extends BaseClass{
+    private UserService userService;
+    public RegisterClass(){
+        userService= (UserService) beanFactory.getBean("userService");
+
+    }
 
     //注册
     public void register() throws BusinessException {
@@ -24,7 +31,7 @@ public class RegisterClass extends BaseClass{
         println(getString("input.password"));
         String password = input.nextLine();
         User user = new User(username,password);  //收集好了 封装给用户对象
-        UserService userService = new UserServiceImpl();
+//        UserService userService = new UserServiceImpl();
         userService.register(user);  //用户注册
 
 

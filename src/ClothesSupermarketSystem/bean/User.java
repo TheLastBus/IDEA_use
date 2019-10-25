@@ -7,7 +7,8 @@ import java.io.Serializable;
  * @date 2019-10-22 21:45
  * @reason :
  */
-public class User implements Serializable {  //可系列化 可以用对象流了
+public class User implements Serializable {
+    private static final long serialVersionUID = 6020800041641065587L;  //可系列化 可以用对象流了
     private int id;
     private String username;
     private String password;

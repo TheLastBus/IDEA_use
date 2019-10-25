@@ -21,6 +21,7 @@ public class UserServiceImpl implements UserService {
     public User register(User user) throws BusinessException {
         UserIO userIO = new UserIO();
         userIO.add(user);
+
         userIO.wirteUsers();
         return user;
     }

@@ -10,6 +10,7 @@ import ClothesSupermarketSystem.service.impl.OrderServiceImpl;
 import ClothesSupermarketSystem.util.BusinessException;
 import ClothesSupermarketSystem.util.ConsoleTable;
 import ClothesSupermarketSystem.util.DateUtil;
+import org.ietf.jgss.Oid;
 
 import java.util.Date;
 import java.util.List;
@@ -21,12 +22,25 @@ import java.util.List;
  */
 public class HomeClass extends BaseClass {
 
+
     private OrderService orderService = new OrderServiceImpl();  //下面多个方法用
     private ClothesService clothesService = new ClothesServiceImpl();
 
+    /*private  OrderService orderService;
+    private  ClothesService clothesService;   //应该与线程有关  登陆注册都成功了
+
+    public  HomeClass() {
+        clothesService= (ClothesService) beanFactory.getBean("clothesService");
+        orderService = (OrderService) beanFactory.getBean("orderService");
+    }*/
+
     public void show(){
-    showProduct();   //显示商品
+        showProduct();   //显示商品
         println("welcome"+currUser.getUsername());
+        menu();
+    }
+
+    public void menu(){          //查询订单要反复使用所以 显示菜单 商品列表移出去  只有想看时候在调用
         boolean flag = true;
         while (flag) {
             println(getString("home.function"));
@@ -34,12 +48,12 @@ public class HomeClass extends BaseClass {
             String select = input.nextLine();
             switch (select) {
                 case "1":   //查询所有订单
-                    findList();
+                        findOrderList();
                     flag=false;
                     break;
                 case "2":  //查找订单
                     findOrderById();
-                    flag=false;
+                   flag=false;
                     break;
                 case "3":  //购买
                     try {
@@ -49,8 +63,11 @@ public class HomeClass extends BaseClass {
                         println(e.getMessage());  //抛出必须捕获这里  ClothesServiceImpl.findById  input.error  然后flag没变就继续循环
                     }
                     break;
+                case"4":  //显示商品
+                    show();
                 case "0":  //退出
                     flag=false;
+                    println(getString("info.exit"));
                     System.exit(0);
                     break;
                 default:
@@ -66,7 +83,7 @@ public class HomeClass extends BaseClass {
      * @throws BusinessException
      */
     private void buyProduct()throws BusinessException {   //clothesServiceimpl抛出的 自己没解决(位置不合适 ) 也抛出
-        //生成订单  需要id 和数量
+        //生成订单  需要clothes 的 id(找衣服) 和数量(计算order)
         boolean flag = true;
         int count = 1;  //订单数
         float sum = 0.0f; //订单总金额
@@ -100,7 +117,8 @@ public class HomeClass extends BaseClass {
             sum+=orderItem.getSum(); //每个订单金额累计  总营业额
             orderItem.setItemId(count++);
             //加到总订单
-            order.getOrderItemList().add(orderItem);
+            order.getOrderItemList().add(orderItem);   //在 n 退出后应该写进去了  为什么读不出来
+
             println(getString("product.buy.continue"));
             String s = input.nextLine();
             switch (s) {
@@ -121,15 +139,66 @@ public class HomeClass extends BaseClass {
         order.setSum(sum);  //营业额
         order.setOrderId(orderService.list().size()+1);  //订单总数 就是ID
 
-        orderService.buyProduct(order);  //调用IO方法
+        orderService.buyProduct(order);  //调用IO方法 买 买完添加到订单
 
         clothesService.update();               //更新库存
         show();
-    }
-    private void findList(){
 
     }
+
+    private void findOrderList() {
+        List<Order> list = orderService.list();
+        for (Order order : list) {
+            showOrder(order);
+        }
+        menu();   //半天这个放错位置了!!
+    }
+
+    //前面存好了各种信息 这里可以调用显示
+    private void showOrder(Order o) {
+        print(getString("product.order.oid")+o.getOrderId());
+        print("\t"+getString("product.order.createDate")+o.getCreateDate());
+        println("\t"+getString("product.order.sum")+o.getSum());  //这是总营业额 看好谁调用的
+
+        ConsoleTable t = new ConsoleTable(9, true);
+        t.appendRow();  //添加一行
+        t.appendColum("itemId") //添加列 展示订单信息
+                .appendColum("brand")
+                .appendColum("style")
+                .appendColum("color")
+                .appendColum("size")
+                .appendColum("price")  //单价
+                .appendColum("description")
+                .appendColum("shoppingNum") //购买数量
+                .appendColum("sum");   //此订单小计金额
+
+        for (OrderItem item : o.getOrderItemList()) {
+            t.appendRow();
+            t.appendColum(item.getItemId())
+                    .appendColum(item.getClothes().getBrand())
+                    .appendColum(item.getClothes().getStyle())
+                    .appendColum(item.getClothes().getColor())
+                    .appendColum(item.getClothes().getSize())     //调用clothes信息显示
+                    .appendColum(item.getClothes().getPrice())
+                    .appendColum(item.getClothes().getDescription())
+                    .appendColum(item.getShoppingNum())   //购买数量
+                    .appendColum(item.getSum());     //购买小计金额
+        }
+        println(t.toString());
+
+    }
+
     private void findOrderById(){
+        println(getString("product.order.input.oid"));
+        String oid = input.nextLine();
+        Order order = orderService.findById(Integer.parseInt(oid));
+        //对象就要非空判断   放前面service判断也行
+        if (order != null) {
+            showOrder(order);
+        } else {
+            println(getString("product.order.input.error"));
+        }
+        menu();
 
     }
     private void showProduct() {
@@ -141,7 +210,7 @@ public class HomeClass extends BaseClass {
                 .appendColum("style")
                 .appendColum("color")
                 .appendColum("size")
-                .appendColum("num")
+                .appendColum("num")  //库存数量
                 .appendColum("price")
                 .appendColum("description");
 

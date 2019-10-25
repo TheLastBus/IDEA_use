@@ -2,6 +2,7 @@ package ClothesSupermarketSystem.bean;
 
 import ClothesSupermarketSystem.util.OrderStatusType;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,8 @@ import java.util.List;
  *
  * 很多人的订单 商场总订单
  */
-public class Order {
+public class Order implements Serializable {
+    private static final long serialVersionUID = 704822422054395635L;
     private int orderId;  //订单Id
     private List<OrderItem> orderItemList = new ArrayList<>();   //一对多关系
     private String createDate;   //生成事件
@@ -71,6 +73,7 @@ public class Order {
     public void setUserId(int userId) {
         this.userId = userId;
     }
+
 
 
 }

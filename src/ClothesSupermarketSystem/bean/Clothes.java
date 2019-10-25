@@ -1,11 +1,14 @@
 package ClothesSupermarketSystem.bean;
 
+import java.io.Serializable;
+
 /**
  * @author zy
  * @date 2019-10-22 21:41
  * @reason :
  */
-public class Clothes {
+public class Clothes implements Serializable {
+    private static final long serialVersionUID = 4019303784415206672L;
     private String id;       //商品编号
     private String brand;    //品牌
     private String style;    // 款式

@@ -19,15 +19,12 @@ public class ClothesServiceImpl implements ClothesService {
 
     @Override
     public List<Clothes> list() throws BusinessException {
-
         return clothesIo.list();
 
     }
 
     @Override   //防止空指针 非空判断
     public Clothes findById(String cid) throws BusinessException {
-
-
         Clothes c = c =  clothesIo.findById(cid);  //这没法捕获 没有错误,,
 
 
